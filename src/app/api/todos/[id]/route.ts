@@ -42,5 +42,5 @@ export async function PUT(request: Request, { params }: Props) {
     data: body,
   });
 
-  return NextResponse.json({ updatedTodo });
+  return NextResponse.json(updatedTodo);
 }

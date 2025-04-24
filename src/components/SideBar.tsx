@@ -40,7 +40,7 @@ export default function SideBar() {
 
                     <div className="mt-8 text-center">
                         <Image src={"https://img.freepik.com/vector-gratis/icono-lindo-gato-negro-aislado_24640-134010.jpg?semt=ais_hybrid&w=740"}
-                            alt={"algo"} className="w-10 h-10 m-auto rounded-full object-cover lg:w-28 lg:h-28"
+                            alt={"algo"} className="w-10 h-10 m-auto rounded-full object-cover lg:w-28 lg:h-28 border border-sky-600"
                             width={128}
                             height={128}
                         >

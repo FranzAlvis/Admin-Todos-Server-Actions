@@ -31,7 +31,7 @@ export async function GET(request: Request) {
 
 const postSchema = object({
   description: string().required(),
-  complete: boolean().optional().default(false),
+  completed: boolean().optional().default(false),
 });
 
 export async function POST(request: Request) {
@@ -40,8 +40,17 @@ export async function POST(request: Request) {
     const todo = await prisma.todo.create({
       data: body,
     });
-    return NextResponse.json({ todo });
+    return NextResponse.json(todo);
   } catch (error) {
     return NextResponse.json(error, { status: 400 });
   }
+}
+
+export async function DELETE(request: Request) {
+  const todos = await prisma.todo.deleteMany({
+    where: {
+      completed: true,
+    },
+  });
+  return NextResponse.json(todos);
 }

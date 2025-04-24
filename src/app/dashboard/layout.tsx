@@ -1,5 +1,5 @@
-import SideBar from '../components/SideBar';
-import TopMenu from '../components/TopMenu';
+import SideBar from '../../components/SideBar';
+import TopMenu from '../../components/TopMenu';
 
 export default function DashboardLayout({ children }: { children: React.ReactNode; }) {
     return (
