@@ -9,7 +9,7 @@ interface Props {
 
 export async function GET(request: Request, { params }: Props) {
   const { id } = await params;
-  const todo = await prisma.todo.findUnique({
+  const todo = await prisma.todo.findMany({
     where: {
       id,
     },
